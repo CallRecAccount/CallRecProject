@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rovi_navigation"
+    app:startDestination="@id/splashScreen">
+
+    <action
+        android:id="@+id/navigateAudios"
+        app:destination="@id/audiosScreen"
+        app:enterAnim="@anim/anim_open_slide_up"
+        app:exitAnim="@anim/anim_close_slide_up"
+        app:popEnterAnim="@anim/anim_open_slide_down"
+        app:popExitAnim="@anim/anim_close_slide_down" />
+    <action
+        android:id="@+id/navigatePlayer"
+        app:destination="@id/playerScreen"
+        app:enterAnim="@anim/anim_open_slide_up"
+        app:exitAnim="@anim/anim_close_slide_up"
+        app:popEnterAnim="@anim/anim_open_slide_down"
+        app:popExitAnim="@anim/anim_close_slide_down" />
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.invan.rovitalk.ui.splash.SplashScreen"
+        android:label="@string/screen_splash"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/moveHome"
+            app:destination="@id/home"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/rovi_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/moveEnter"
+            app:destination="@id/enterScreen"
+            app:popUpTo="@id/rovi_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/to_authScreen"
+            app:destination="@id/authScreen"
+            app:popUpTo="@id/rovi_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/home"
+        android:name="uz.invan.rovitalk.ui.home.HomeScreen"
+        android:label="@string/screen_home"
+        tools:layout="@layout/screen_home">
+        <action
+            android:id="@+id/moveSection"
+            app:destination="@id/section" />
+        <action
+            android:id="@+id/movePodcasts"
+            app:destination="@id/podcastsScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popUpTo="@id/section"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/openPrice"
+            app:destination="@id/priceDialog" />
+        <action
+            android:id="@+id/navigatePlayerFromHome"
+            app:destination="@id/playerScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+        <action
+            android:id="@+id/navigateAudiosFromHome"
+            app:destination="@id/audiosScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/section"
+        android:name="uz.invan.rovitalk.ui.section.SectionScreen"
+        android:label="@string/screen_section"
+        tools:layout="@layout/screen_section">
+        <action
+            android:id="@+id/moveProfile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/movePodcasts"
+            app:destination="@id/podcastsScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popUpTo="@id/section"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/navigatePlayerFromSection"
+            app:destination="@id/playerScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+        <action
+            android:id="@+id/navigateAudiosFromSection"
+            app:destination="@id/audiosScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+        <action
+            android:id="@+id/navigateSearch"
+            app:destination="@id/searchScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popEnterAnim="@anim/anim_open_slide_right"
+            app:popExitAnim="@anim/anim_close_slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="uz.invan.rovitalk.ui.profile.ProfileScreen"
+        android:label="@string/screen_profile"
+        tools:layout="@layout/screen_profile">
+        <action
+            android:id="@+id/navigateSettings"
+            app:destination="@id/settingsScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popEnterAnim="@anim/anim_open_slide_right"
+            app:popExitAnim="@anim/anim_close_slide_right" />
+        <action
+            android:id="@+id/navigateEditProfile"
+            app:destination="@id/editProfileScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popEnterAnim="@anim/anim_open_slide_right"
+            app:popExitAnim="@anim/anim_close_slide_right" />
+        <action
+            android:id="@+id/navigateQR"
+            app:destination="@id/QRScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+        <action
+            android:id="@+id/navigateAudiosFromProfile"
+            app:destination="@id/audiosScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+        <action
+            android:id="@+id/navigatePlayerFromProfile"
+            app:destination="@id/playerScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+    </fragment>
+    <action
+        android:id="@+id/moveHomeMenu"
+        app:destination="@id/home"
+        app:enterAnim="@anim/anim_open_move_right"
+        app:exitAnim="@anim/anim_close_move_right"
+        app:popEnterAnim="@anim/anim_open_move_left"
+        app:popExitAnim="@anim/anim_close_move_left"
+        app:popUpTo="@id/rovi_navigation"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/moveSectionMenuFromHome"
+        app:destination="@id/section"
+        app:enterAnim="@anim/anim_open_move_left"
+        app:exitAnim="@anim/anim_close_move_left"
+        app:popEnterAnim="@anim/anim_open_move_right"
+        app:popExitAnim="@anim/anim_close_move_right" />
+    <action
+        android:id="@+id/moveSectionMenuFromProfile"
+        app:destination="@id/section"
+        app:enterAnim="@anim/anim_open_move_right"
+        app:exitAnim="@anim/anim_close_move_right"
+        app:popEnterAnim="@anim/anim_open_move_left"
+        app:popExitAnim="@anim/anim_close_move_left"
+        app:popUpTo="@id/home"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/moveProfileMenu"
+        app:destination="@id/profile"
+        app:enterAnim="@anim/anim_open_move_left"
+        app:exitAnim="@anim/anim_close_move_left"
+        app:popEnterAnim="@anim/anim_open_move_right"
+        app:popExitAnim="@anim/anim_close_move_right"
+        app:popUpTo="@id/home"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/enterScreen"
+        android:name="uz.invan.rovitalk.ui.auth.EnterScreen"
+        android:label="screen_enter"
+        tools:layout="@layout/screen_enter">
+        <action
+            android:id="@+id/moveRegister"
+            app:destination="@id/registerScreen"
+            app:enterAnim="@anim/anim_open_move_up"
+            app:exitAnim="@anim/anim_close_move_up"
+            app:popEnterAnim="@anim/anim_open_move_down"
+            app:popExitAnim="@anim/anim_close_move_down" />
+        <action
+            android:id="@+id/navigateVerify"
+            app:destination="@id/verifyScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popEnterAnim="@anim/anim_open_slide_right"
+            app:popExitAnim="@anim/anim_close_slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerScreen"
+        android:name="uz.invan.rovitalk.ui.auth.RegisterScreen"
+        android:label="screen_register"
+        tools:layout="@layout/screen_register">
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/navigateVerify"
+            app:destination="@id/verifyScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popEnterAnim="@anim/anim_open_slide_right"
+            app:popExitAnim="@anim/anim_close_slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/podcastsScreen"
+        android:name="uz.invan.rovitalk.ui.section.PodcastsScreen"
+        android:label="screen_podcasts"
+        tools:layout="@layout/screen_podcasts">
+        <action
+            android:id="@+id/action_podcastsScreen_to_audioScreen"
+            app:destination="@id/audioScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popEnterAnim="@anim/anim_open_slide_right"
+            app:popExitAnim="@anim/anim_close_slide_right" />
+        <argument
+            android:name="categoryId"
+            app:argType="string" />
+        <action
+            android:id="@+id/navigatePlayerFromPodcasts"
+            app:destination="@id/playerScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+        <action
+            android:id="@+id/navigateAudiosFromPodcasts"
+            app:destination="@id/audiosScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/audioScreen"
+        android:name="uz.invan.rovitalk.ui.audio.AudioScreen"
+        android:label="screen_audio"
+        tools:layout="@layout/screen_audio">
+        <action
+            android:id="@+id/navigateImage"
+            app:destination="@id/imageScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageScreen"
+        android:name="uz.invan.rovitalk.ui.audio.ImageScreen"
+        android:label="screen_image"
+        tools:layout="@layout/screen_image" />
+    <fragment
+        android:id="@+id/settingsScreen"
+        android:name="uz.invan.rovitalk.ui.profile.settings.SettingsScreen"
+        android:label="screen_settings"
+        tools:layout="@layout/screen_settings">
+        <action
+            android:id="@+id/moveReminderSettings"
+            app:destination="@id/reminderSettingScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popEnterAnim="@anim/anim_open_slide_right"
+            app:popExitAnim="@anim/anim_close_slide_right" />
+        <action
+            android:id="@+id/moveRestorePurchase"
+            app:destination="@id/restorePriceScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popEnterAnim="@anim/anim_open_slide_right"
+            app:popExitAnim="@anim/anim_close_slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileScreen"
+        android:name="uz.invan.rovitalk.ui.profile.edit.EditProfileScreen"
+        android:label="screen_edit_profile"
+        tools:layout="@layout/screen_edit_profile">
+        <action
+            android:id="@+id/navigateSettings"
+            app:destination="@id/settingsScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popEnterAnim="@anim/anim_open_slide_right"
+            app:popExitAnim="@anim/anim_close_slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/reminderSettingScreen"
+        android:name="uz.invan.rovitalk.ui.profile.settings.ReminderSettingScreen"
+        android:label="screen_reminder_setting"
+        tools:layout="@layout/screen_reminder_setting" />
+    <dialog
+        android:id="@+id/priceDialog"
+        android:name="uz.invan.rovitalk.ui.price.PriceDialog"
+        android:label="dialog_price"
+        tools:layout="@layout/dialog_price" />
+    <action
+        android:id="@+id/openPrice"
+        app:destination="@id/priceDialog" />
+    <fragment
+        android:id="@+id/restorePriceScreen"
+        android:name="uz.invan.rovitalk.ui.price.RestorePriceScreen"
+        android:label="screen_restore_price"
+        tools:layout="@layout/screen_restore_price" />
+    <action
+        android:id="@+id/player"
+        app:destination="@id/audioScreen"
+        app:enterAnim="@anim/anim_open_move_up"
+        app:exitAnim="@anim/anim_close_move_up"
+        app:popEnterAnim="@anim/anim_open_move_down"
+        app:popExitAnim="@anim/anim_close_move_down" />
+    <fragment
+        android:id="@+id/videoScreen"
+        android:name="uz.invan.rovitalk.ui.video.VideoScreen"
+        android:label="screen_video"
+        tools:layout="@layout/screen_video">
+        <argument
+            android:name="introduction"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <action
+        android:id="@+id/moveVideoScreen"
+        app:destination="@id/videoScreen"
+        app:enterAnim="@anim/anim_open_slide_up"
+        app:exitAnim="@anim/anim_close_slide_up"
+        app:popEnterAnim="@anim/anim_open_slide_down"
+        app:popExitAnim="@anim/anim_close_slide_down" />
+    <fragment
+        android:id="@+id/verifyScreen"
+        android:name="uz.invan.rovitalk.ui.auth.VerifyScreen"
+        android:label="screen_verify"
+        tools:layout="@layout/screen_verify">
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/navigateHome"
+            app:destination="@id/home"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/rovi_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <action
+        android:id="@+id/splash"
+        app:destination="@id/splashScreen"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/rovi_navigation"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/playerScreen"
+        android:name="uz.invan.rovitalk.ui.audio.PlayerScreen"
+        android:label="screen_player"
+        tools:layout="@layout/screen_player">
+        <argument
+            android:name="category"
+            app:argType="uz.invan.rovitalk.data.models.feed.FeedCategory" />
+        <argument
+            android:name="subCategory"
+            app:argType="uz.invan.rovitalk.data.models.feed.FeedSubCategory"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/audiosScreen"
+        android:name="uz.invan.rovitalk.ui.audio.AudiosScreen"
+        android:label="screen_audios"
+        tools:layout="@layout/screen_audios">
+        <action
+            android:id="@+id/navigatePlayerFromAudios"
+            app:destination="@id/playerScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+        <argument
+            android:name="category"
+            app:argType="uz.invan.rovitalk.data.models.feed.FeedCategory" />
+    </fragment>
+    <fragment
+        android:id="@+id/QRScreen"
+        android:name="uz.invan.rovitalk.ui.profile.qr.QRScreen"
+        android:label="screen_qr"
+        tools:layout="@layout/screen_qr" />
+    <fragment
+        android:id="@+id/searchScreen"
+        android:name="uz.invan.rovitalk.ui.section.SearchScreen"
+        android:label="screen_search"
+        tools:layout="@layout/screen_search">
+        <action
+            android:id="@+id/navigatePodcastsFromSearch"
+            app:destination="@id/podcastsScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"
+            app:popUpTo="@id/section"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/navigatePlayerFromSearch"
+            app:destination="@id/playerScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+        <action
+            android:id="@+id/navigateAudiosFromSearch"
+            app:destination="@id/audiosScreen"
+            app:enterAnim="@anim/anim_open_slide_up"
+            app:exitAnim="@anim/anim_close_slide_up"
+            app:popEnterAnim="@anim/anim_open_slide_down"
+            app:popExitAnim="@anim/anim_close_slide_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentSystemsScreen"
+        android:name="uz.invan.rovitalk.ui.price.PaymentSystemsScreen"
+        android:label="screen_payment_systems"
+        tools:layout="@layout/screen_payment_systems">
+        <argument
+            android:name="prices"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/paymentSystems"
+        app:destination="@id/paymentSystemsScreen"
+        app:enterAnim="@anim/anim_open_slide_left"
+        app:exitAnim="@anim/anim_close_slide_left"
+        app:popEnterAnim="@anim/anim_open_slide_right"
+        app:popExitAnim="@anim/anim_close_slide_right" />
+    <fragment
+        android:id="@+id/authScreen"
+        android:name="uz.invan.rovitalk.ui.auth.AuthScreen"
+        android:label="screen_auth"
+        tools:layout="@layout/screen_auth" >
+        <action
+            android:id="@+id/to_enterScreen"
+            app:destination="@id/enterScreen" />
+    </fragment>
+</navigation>

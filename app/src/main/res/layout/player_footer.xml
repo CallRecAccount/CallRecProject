@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_player_footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+    app:show_mode="lay_down">
+
+    <uz.invan.rovitalk.ui.feed.section.VerticalSquareAppCompatImageButton
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_close"
+        android:tint="@color/raven" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerPlayerFooter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_main_reverse"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/imagePodcast"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/feed_podcast_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textPodcastTitle"
+            style="@style/Body2SemiBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/textSectionName"
+            app:layout_constraintRight_toLeftOf="@id/arrowRight"
+            app:layout_constraintTop_toBottomOf="@id/textSectionName"
+            tools:text="Siyrat" />
+
+        <TextView
+            android:id="@+id/textSectionName"
+            style="?textAppearanceBody2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            app:layout_constraintRight_toLeftOf="@id/arrowRight"
+            android:layout_marginEnd="@dimen/item_inner_space"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@id/textPodcastTitle"
+            app:layout_constraintLeft_toRightOf="@id/imagePodcast"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Magnit 3.0 onlayn kursi" />
+
+        <!--<TextView
+            android:id="@+id/textPodcastLength"
+            style="?textAppearanceOverline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="12 daqiqa"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/textSectionName"
+            app:layout_constraintLeft_toRightOf="@id/textSectionName"
+            app:layout_constraintTop_toTopOf="@id/textSectionName" />-->
+
+        <ImageView
+            android:id="@+id/arrowRight"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/player_footer_forward_image"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.daimajia.swipe.SwipeLayout>

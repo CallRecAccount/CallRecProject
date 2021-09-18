@@ -1,0 +1,242 @@
+<resources>
+    <string name="app_name">RoviTalk</string>
+
+    <!--Bottom navigation bar menu-->
+    <string name="home">Сегодня</string>
+    <string name="podcasts">Аудио</string>
+    <string name="profile">Аудио</string>
+
+    <!--Screen labels-->
+    <string name="screen_splash">Splash screen</string>
+    <string name="screen_home">Home screen</string>
+    <string name="screen_section">Section screen</string>
+    <string name="screen_profile">Profile screen</string>
+    <string name="screen_podcasts">Podcasts screen</string>
+
+    <!--Screens-->
+    <!--Enter screen-->
+    <string name="purpose_of_app">Для душ\nкоторые хотят познать себя…</string>
+    <string name="register">Регистрация</string>
+    <string name="phone_number">Телефонный номер</string>
+    <string name="login">Войти в Rovi</string>
+    <string name="start_from_here">Если вы раньше не использовали Rovi\n<u>начните с этого</u></string>
+    <string name="app_version_x">Версия %s</string>
+    <!--Register screen-->
+    <string name="cancel">Отменить</string>
+    <string name="create_page_in_rovi">Откройте страницу в Rovi</string>
+    <string name="username">Имя пользователя</string>
+    <string name="last_name">Фамилия</string>
+    <string name="first_name">Имя</string>
+    <string name="email">Адрес электронной почты</string>
+    <string name="password">Пароль</string>
+    <string name="accept_terms_and_conditions">Я согласен с условиями покупки и использование Rovitalk</string>
+    <string name="are_you_registered">Вы регистрировались\nв Rovi\nраньше?</string>
+    <string name="enter">Вход</string>
+    <string name="video_instruction">Видео инструкция</string>
+    <!--Verify Screen-->
+    <string name="verify_phone_number">Потвердите свой номер телефона</string>
+    <string name="enter_4_digit_code">Чтобы продолжить, введите 4-значный код, который мы отрпавили на ваш номер телефона</string>
+    <string name="verify">Потверждение</string>
+    <string name="resend_code"><![CDATA[<p>Не получили код? <span style="color:#70B17C;">Отправить заново</span></p>]]></string>
+    <!--Home Screen-->
+    <string name="assalamu_alaykum">Добрый день</string>
+    <string name="which_section_are_you_interested_in">Какой раздел вам интересен?</string>
+    <string name="you_can_choose">Можете выбрать…</string>
+    <string name="buy_full">Купить полную часть</string>
+    <string name="more">Все</string>
+    <string name="x_minutes">%d минут</string>
+    <string name="x_count">%d штук</string>
+    <string name="most_listened">Самый слышимый</string>
+    <string name="new_to_rovi">Вы новичок в Rovi?</string>
+    <string name="learn_how_to_use">Как пользоваться?</string>
+    <string name="category_empty">Это категория еще не заполнена</string>
+    <string name="sub_category_empty">Это категория еще не заполнена</string>
+    <!--Section Screen-->
+    <string name="search">Поиск</string>
+    <string name="updating">Обновление…</string>
+    <string name="updated">Данные обновлены</string>
+    <!--Search Screen-->
+    <string name="search_hint">Искать…</string>
+    <!--Profile Screen-->
+    <string name="first_last_names">%s %s</string>
+    <string name="edit_profile">Редактирование профиля</string>
+    <string name="your_active_tariffs">Ваши активные тарифные планы</string>
+    <string name="last_listened">Последнее, что вы слышали</string>
+    <string name="start_date">Время начала</string>
+    <string name="end_date">Время истечения</string>
+    <string name="language_uz">Ўзбек</string>
+    <string name="language_ru">Русский</string>
+    <string name="language_en">English</string>
+    <string name="choose_language">Тилни танланг</string>
+    <string name="choose_language_want_to_use">Иловадан фойдаланмоқчи бўлган тилни танланг</string>
+    <string name="set_language">Тилни қўллаш</string>
+    <string-array name="months">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+    <string name="months_x_x">%s %d, %d</string>
+    <!--Audio Screen-->
+    <string name="x_order">%d. </string>
+    <string name="x_minute_seconds">%02d:%02d</string>
+    <string name="mute">Без фона</string>
+    <string name="ambient">+</string>
+    <string name="vocal">-</string>
+    <string name="free">Бесплатно</string>
+    <string name="enable_permissions">Включить разрешения</string>
+    <string name="enable_call_state_permissions">Позволяют проверять статус звонков, чтобы эффективно использовать сервис и повысить эффективность работы приложения.</string>
+    <string name="not_enable_permissions">Нет</string>
+    <string name="enable">Позволять</string>
+    <!--Settings Screen-->
+    <string name="settings">Настройки</string>
+    <string name="log_out">Выйти из программы</string>
+    <string name="settings_item">Settings Item</string>
+    <string name="settings_forward_icon">Settings forward icon</string>
+    <string name="faq_settings">Реконмендации по вопросам</string>
+    <string name="daily_notifications_settings">Ежедневные заметки</string>
+    <string name="restore_purchase_setting">Восстоновить покупку</string>
+    <string name="about_rovi_setting">Про Rovi</string>
+    <string name="app_rating_setting">Рейтинг программы</string>
+    <string name="comment_your_thoughts_settings">Оставьте свое мнение</string>
+    <string name="law_instructions_settings">Юридические информации</string>
+    <string name="are_you_sure">Ваше мнение твёрдое?</string>
+    <string name="your_all_data_will_be_deleted">При выходе из программы вся скачанная вами музыка будет стерта из памяти программы</string>
+    <string name="yes_want_to_log_out">Да</string>
+    <string name="no_want_to_stay">Нет</string>
+    <string name="feedback_title">Поделитесь своими мыслями</string>
+    <string name="feedback_subject">О тзыв о RoviTalk</string>
+    <string name="feedback_text">Напишите свои мнение здесь…\n\nУ меня есть версия приложения %s и версия Android %d</string>
+    <string name="feedback_not_available">На вашем телефоне не установлено приложение электронной почты</string>
+    <!--Edit Profile Screen-->
+    <string name="upload">Загрузить</string>
+    <string name="save_data">Сохранение данных</string>
+    <!--Reminder Setting Screen-->
+    <string name="daily_reminders">Ежедневные заметки</string>
+    <string name="time">Время</string>
+    <string name="add_reminder">Добавить примечание</string>
+    <string name="add_daily_reminders_for_yourself">Добавляйте ежедневные заметки для себя</string>
+    <string name="reminder_title">Загаловок</string>
+    <string name="reminder_text">Текст заметки</string>
+    <string name="remind_time">Время заметки</string>
+    <string name="choose_remind_time">Устоновите время заметки</string>
+    <string name="x_time">%s-%s</string>
+    <string name="remind">Напомнить</string>
+    <!--Price Dialog-->
+    <string name="tariffs">Тарифные планы</string>
+    <string name="x_day">%d день</string>
+    <string name="one_month">1 месяц</string>
+    <string name="three_month">3 месяца</string>
+    <string name="six_month">6 месяца</string>
+    <string name="tariff_chosen">Тариф выбран</string>
+    <string name="x_sum">%d\nсум</string>
+    <string name="x_sum_str">%s сум</string>
+    <string name="total_cost">Общий счет</string>
+    <string name="privacy_rules">Политика конфиденциальности</string>
+    <string name="usage_rules">Условия эксплуатации</string>
+    <string name="decline_responsibility">Отказ от ответственности</string>
+    <!--Payment systems screen-->
+    <string name="payment_systems">Платежные системы</string>
+    <string name="payme">Payme</string>
+    <string name="click">Click</string>
+    <string name="robo_kassa">Robo Kassa</string>
+    <string name="paypal">PayPal</string>
+    <string name="visa">Visa</string>
+    <string name="mastercard">Mastercard</string>
+    <string name="io_money">ЮMoney</string>
+    <string name="qiwi">Qiwi</string>
+    <string name="apple_pay">Apple Pay</string>
+    <string name="other">Other</string>
+    <string name="payme_description">Оплатить через программу %s</string>
+    <string name="click_description">Оплатить через программу %s</string>
+    <string name="robo_kassa_description">Оплатить через программу %s</string>
+    <string name="paypal_description">Оплатить через программу %s</string>
+    <string name="visa_description">Оплатить через программу %s</string>
+    <string name="mastercard_description">Оплатить через программу %s</string>
+    <string name="io_money_description">Оплатить через программу %s</string>
+    <string name="qiwi_description">Оплатить через программу %s</string>
+    <string name="apple_pay_description">Оплатить через программу %s</string>
+    <string name="other_description">Оплатить через программу %s</string>
+    <string name="amount_to_pay">Сумма к оплате</string>
+    <string name="usd_x">USD (СШA) - $%s</string>
+    <string name="rub_x">РУБЛЬ (РУ) - %s руб.</string>
+    <string name="sum_x">СУМ (УЗБ) - %s сум</string>
+    <string name="support_center">RoviTalk <b>CALL CENTER</b></string>
+    <string name="soon">Скоро…</string>
+    <!--Restore Price Screen-->
+    <string name="restore_purchase">Восстановить покупку</string>
+    <string name="restore_purchase_info">Если вы ранее совершали покупку\nна RoviTalk и больше не знаете, как получить\nдоступ своей странице\n нажмите эту кнопку</string>
+
+    <!--Audio Player Service-->
+    <string name="previous">Предыдущий</string>
+    <string name="pause">Остонавит</string>
+    <string name="play">Начать</string>
+    <string name="next">Следующий</string>
+    <string name="x_minutes_left">Осталось %d минут</string>
+    <string name="player_notification_channel_name">Канал Аудио плаер</string>
+    <string name="player_notification_channel_description">Этот канал используется только для отображения музыкального уведомления</string>
+    <string name="unknown_album">Неизвестный альбом</string>
+    <string name="unknown_music">Неизвестная песня</string>
+
+    <!--Links-->
+    <string name="support_link">https://rovitalk.com</string>
+    <string name="support_telegram_link">https://t.me/rovimaster</string>
+
+    <!--Toasts-->
+    <string name="tap_again_to_exit">Нажмите еще раз, чтобы выйти из программы</string>
+    <string name="audio_not_loaded_completely">Аудио до конца не загружено</string>
+    <string name="allow_camera_permission">Вам нужно разрешить камере продолжить работу</string>
+    <!--Auth-->
+    <string name="success_otp_sent">Код был отправлен на номер телефона %s</string>
+    <!--Price-->
+    <string name="success_bought">Успешно подписались на курсы!</string>
+    <!--QR-->
+    <string name="success_qr">QR успешно активирован</string>
+
+    <!--Exceptions-->
+    <!--Network exceptions-->
+    <string name="exception_wrong_validation">Данные были введены неверно, проверьте и попробуйте еще раз</string>
+    <string name="exception_too_many_attempts">Слишком много попыток, повторите попытку через некоторое время</string>
+    <string name="exception_user_not_found">Этот номер телефона не зарегистрирован в системе</string>
+    <string name="exception_user_already_exists">Этот пользователь телефона уже находится в системе, попробуйте войти в систему</string>
+    <string name="exception_wrong_otp">Код был введен неверно, проверьте и введите заново</string>
+    <string name="exception_otp_expired">Код старый, введите последний отправленный код</string>
+    <string name="exception_unauthorized">Пользователь не вошел в систему, войдите сново</string>
+    <string name="exception_role_not_found">Возникла проблема с пользователем, повторите попытку позже</string>
+    <string name="exception_qr_not_found">Введенный QR-код недоступен</string>
+    <string name="exception_qr_already_exists">Срок действия этого QR-кода истек</string>
+    <string name="exception_forbidden">Текущий курс не был куплен пользователем или срок истек</string>
+    <string name="exception_balance_not_enough">Баланса пользователя не хватает для покупки</string>
+    <string name="exception_could_not_retrieve_data">Не удалось загрузить данные, повторите попытку позже</string>
+    <string name="exception_unknown_exception">Произошла непредвиденная ошибка, попробуйте еще раз</string>
+    <string name="exception_network_no_internet">Нет подключения к серверу, проверьте подключение к Интернету и повторите попытку</string>
+    <string name="exception_network_time_out">Время подключения к серверу истекло, проверьте качество интернета и попробуйте еще ра</string>
+    <!--Login Exceptions-->
+    <string name="exception_wrong_phone_length">Номер телефона введен неправильно</string>
+    <!--Verify Exceptions-->
+    <string name="exception_wrong_otp_length">Код должен состоять не менее чем из %d символов</string>
+    <!--Register Exceptions-->
+    <string name="exception_wrong_first_name_length">Длина имени должна быть не менее %d символов</string>
+    <string name="exception_wrong_last_name_length">Фамилия должна содержать не менее %d символов</string>
+    <string name="exception_wrong_agreement">Вы должны согласиться с условиями покупки и использования, чтобы продолжить</string>
+    <!--Price Exceptions-->
+    <string name="exception_tariff_not_chosen">Пожалуйста, выберите тариф, чтобы продолжить</string>
+    <!--Player Exceptions-->
+    <string name="exception_permissions_recommended">Мы рекомендуем включить разрешения для более эффективного использования приложения</string>
+
+    <!--Notifications-->
+    <!--File create notification-->
+    <string name="new_file_created">Добавлен новый файл</string>
+    <string name="new_file_content">Попробуйте создать новый файл с именем %s на основе авторства %s</string>
+    <string name="new_file_channel">Уведомления о новых файлах</string>
+    <!--Reminder notification-->
+    <string name="daily_reminder_channel">Уведомления о ежедневных уведомлениях</string>
+</resources>

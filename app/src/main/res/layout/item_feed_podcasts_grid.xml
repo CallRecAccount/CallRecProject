@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <uz.invan.rovitalk.ui.feed.section.SquareImageView
+        android:id="@+id/imagePodcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/free"
+        style="@style/CaptionSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/background_contained_rounded_primary_16"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="@string/free"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/imagePodcast"
+        app:layout_constraintTop_toTopOf="@id/imagePodcast" />
+
+    <ImageView
+        android:id="@+id/lock"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/circle_background_primary"
+        android:contentDescription="@string/audio_image"
+        android:padding="4dp"
+        android:src="@drawable/ic_baseline_lock_24"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/imagePodcast"
+        app:layout_constraintTop_toTopOf="@id/imagePodcast" />
+
+    <TextView
+        android:id="@+id/textPodcastTitle"
+        style="@style/CaptionSemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/imagePodcast"
+        tools:text="Aybdorlik hissi" />
+
+    <TextView
+        android:id="@+id/textSectionName"
+        style="?textAppearanceCaption"
+        android:layout_width="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textPodcastTitle"
+        tools:text="Ertakterapiya" />
+
+    <TextView
+        android:id="@+id/textPodcastLength"
+        style="?textAppearanceCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textSectionName"
+        tools:text="12 daqiqa" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

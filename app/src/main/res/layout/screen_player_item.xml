@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageAudio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="64dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/audio_image"
+        android:transitionName="@string/image"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/textAudioName"
+        style="@style/Headline6SemiBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="@id/imageAudio"
+        app:layout_constraintRight_toRightOf="@id/imageAudio"
+        tools:text="O'zlikni anglash"
+        app:layout_constraintTop_toBottomOf="@id/imageAudio" />
+
+    <TextView
+        android:id="@+id/textAuthor"
+        style="?textAppearanceBody1"
+        android:layout_width="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="@id/imageAudio"
+        app:layout_constraintRight_toRightOf="@id/imageAudio"
+        app:layout_constraintTop_toBottomOf="@id/textAudioName"
+        android:gravity="center"
+        tools:text="Uyqudagi va tungi qo'rquvlarni davolash uchun nima qilish kerak" />
+
+    <io.feeeei.circleseekbar.CircleSeekBar
+        android:id="@+id/progressAudio"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAuthor"
+        app:wheel_max_process="100"
+        app:wheel_pointer_color="@color/colorPrimary"
+        app:wheel_reached_color="@color/colorPrimary"
+        app:wheel_reached_width="8dp"
+        app:wheel_scroll_only_one_circle="true"
+        app:wheel_unreached_color="@color/abbey"
+        app:wheel_unreached_width="8dp" />
+
+    <io.feeeei.circleseekbar.CircleSeekBar
+        android:id="@+id/progressAudioLoading"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAuthor"
+        app:wheel_can_touch="false"
+        app:wheel_pointer_color="@color/none"
+        app:wheel_reached_color="@color/ghost_50"
+        app:wheel_reached_width="8dp"
+        app:wheel_scroll_only_one_circle="true"
+        app:wheel_unreached_color="@color/none"
+        app:wheel_unreached_width="8dp" />
+
+    <ProgressBar
+        android:id="@+id/progressCircular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/progressAudio"
+        app:layout_constraintLeft_toLeftOf="@id/progressAudio"
+        app:layout_constraintRight_toRightOf="@id/progressAudio"
+        app:layout_constraintTop_toTopOf="@id/progressAudio" />
+
+    <ImageButton
+        android:id="@+id/controlButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/control_image"
+        android:src="@drawable/ic_play_player"
+        app:layout_constraintBottom_toTopOf="@id/textTime"
+        app:layout_constraintLeft_toLeftOf="@id/progressAudio"
+        app:layout_constraintRight_toRightOf="@id/progressAudio"
+        app:layout_constraintTop_toTopOf="@id/progressAudio"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textTime"
+        style="?textAppearanceCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="18:32"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/progressAudio"
+        app:layout_constraintLeft_toLeftOf="@id/progressAudio"
+        app:layout_constraintRight_toRightOf="@id/progressAudio"
+        app:layout_constraintTop_toBottomOf="@id/controlButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

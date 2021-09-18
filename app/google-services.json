@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "871600264827",
+    "firebase_url": "https://rovi-talk.firebaseio.com",
+    "project_id": "rovi-talk",
+    "storage_bucket": "rovi-talk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871600264827:android:717518cc1de80cbf7574de",
+        "android_client_info": {
+          "package_name": "uz.invan.rovitalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871600264827-out3kjvh6rsfgbbi5g2pd52ttt4ho587.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBaXwU_-OpctINSlOfGusYQwi2D1JRQcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871600264827-out3kjvh6rsfgbbi5g2pd52ttt4ho587.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

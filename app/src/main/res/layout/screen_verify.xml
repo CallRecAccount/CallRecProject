@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorBackground"
+    android:fillViewport="true"
+    tools:context=".ui.auth.VerifyScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/gradient_main"
+            app:layout_constraintBottom_toTopOf="@id/body"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1" />
+
+        <Space
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintVertical_weight="2" />
+
+        <ImageView
+            android:id="@+id/imageVerifyPhoneNumber"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/verify_phone_number_image"
+            android:src="@drawable/ic_verify_phone_number"
+            app:layout_constraintBottom_toTopOf="@id/textVerifyPhoneNumber"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/header" />
+
+        <TextView
+            android:id="@+id/textVerifyPhoneNumber"
+            style="@style/Body1SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/verify_phone_number"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/header"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageVerifyPhoneNumber" />
+
+        <TextView
+            android:id="@+id/textEnter4DigitCode"
+            style="?textAppearanceBody1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/enter_4_digit_code"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/body" />
+
+        <com.mukesh.OtpView
+            android:id="@+id/otp"
+            style="?textAppearanceHeadline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:inputType="numberDecimal"
+            android:textColor="@color/colorPrimary"
+            app:OtpHideLineWhenFilled="true"
+            app:OtpItemCount="4"
+            app:OtpLineColor="@color/colorPrimary"
+            app:OtpViewType="line"
+            app:layout_constraintBottom_toTopOf="@id/timer"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resend" />
+
+        <!--
+                <com.prush.bndrsntchtimer.BndrsntchTimer
+                    android:id="@+id/timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="32dp"
+                    app:layout_constraintBottom_toTopOf="@id/verify"
+                    app:layout_constraintTop_toBottomOf="@id/otp" />
+        -->
+
+        <uz.invan.rovitalk.util.custom.TimerProgressBar
+            android:id="@+id/timer"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:mirrorForRtl="true"
+            app:layout_constraintBottom_toTopOf="@id/verify"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otp" />
+
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?colorAccent"
+            app:layout_constraintBottom_toBottomOf="@id/timer"
+            app:layout_constraintLeft_toLeftOf="@id/timer"
+            app:layout_constraintRight_toRightOf="@id/timer"
+            app:layout_constraintTop_toTopOf="@id/timer" />
+
+        <ImageButton
+            android:id="@+id/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/resend_image"
+            android:src="@drawable/ic_baseline_refresh_24"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/otp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textEnter4DigitCode" />
+
+        <Button
+            android:id="@+id/verify"
+            style="@style/AccentContainedButton"
+            android:layout_margin="32dp"
+            android:stateListAnimator="@null"
+            android:text="@string/verify"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timer" />
+
+        <!--<TextView
+            android:id="@+id/textResendCode"
+            style="?textAppearanceCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="@string/resend_code" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_bottom_search"
+        android:title="@string/search" />
+
+    <item
+        android:id="@+id/section"
+        android:icon="@drawable/ic_listen"
+        android:title="@string/podcasts" />
+
+    <item
+        android:id="@+id/books"
+        android:icon="@drawable/ic_books"
+        android:title="@string/books" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile" />
+</menu>

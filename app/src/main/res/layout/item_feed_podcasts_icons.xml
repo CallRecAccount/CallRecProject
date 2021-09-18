@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/podcastImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:contentDescription="@string/feed_podcast_image"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:transitionName="@string/category_transition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/free"
+        style="@style/CaptionSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/background_contained_rounded_primary_16"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="@string/free"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/podcastImage"
+        app:layout_constraintTop_toTopOf="@id/podcastImage" />
+
+    <ImageView
+        android:id="@+id/lock"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/circle_background_primary"
+        android:contentDescription="@string/audio_image"
+        android:padding="4dp"
+        android:src="@drawable/ic_baseline_lock_24"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/podcastImage"
+        app:layout_constraintTop_toTopOf="@id/podcastImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

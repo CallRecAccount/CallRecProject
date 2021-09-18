@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">@color/shark</color>
+    <color name="colorAccent">@color/fern</color>
+    <color name="colorBackground">@color/white</color>
+
+    <color name="blue_violet">#544EAF</color>
+    <color name="cornflower_blue">#6C63FF</color>
+    <color name="manatee">#999B9F</color>
+    <color name="gray">#8A8A8A</color>
+    <!--Image picker colors-->
+    <color name="ucrop_color_toolbar">@color/deluge</color>
+    <color name="ucrop_color_statusbar">@color/deluge</color>
+    <color name="ucrop_color_widget_active">@color/fern</color>
+
+    <color name="shark">#2B303A</color>
+    <color name="deluge">#8565A3</color>
+    <color name="deluge_50">#808565A3</color>
+    <color name="victoria">#484F96</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_26">#42FFFFFF</color>
+    <color name="fern">#70B17C</color>
+    <color name="fern_26">#4270B17C</color>
+    <color name="raven">#828385</color>
+    <color name="ghost">#C6C7C9</color>
+    <color name="ghost_50">#80C6C7C9</color>
+    <color name="abbey">#4E5159</color>
+    <color name="nobel">#B5B5B5</color>
+    <color name="trout">#4B4F59</color>
+    <color name="bright_gray">#3E414A</color>
+    <color name="athens_gray">#EAEEF1</color>
+    <color name="oslo_gray">#898F97</color>
+    <color name="black">#000000</color>
+    <color name="dodger_blue">#2196F3</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#F44336</color>
+    <color name="iron">#D5D6D8</color>
+    <color name="none">#00000000</color>
+    <color name="mercury">#E5E5E5</color>
+</resources>
