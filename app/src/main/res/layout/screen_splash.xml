@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_main"
+    android:background="@color/shark"
     tools:context=".ui.splash.SplashScreen">
 
     <ImageView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/logo"
         android:scaleType="center"
-        android:src="@drawable/rovi_logo"
+        android:src="@drawable/ic_enter_book_image"
         android:transitionName="@string/rovi_animation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -31,6 +31,8 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
     private val viewModel by viewModels<HomeViewModel>()
     private val config = FeedConfig(arrayListOf())
     private val adapter by lazy { FeedAdapter(config) }
+    private val storyAdapter = StoryAdapter()
+    private val bannerAdapter = BannerAdapter()
     private var introduction: String? = null
 
     private var isAnimated = AtomicBoolean(false)
@@ -59,6 +61,12 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
             layoutManager = LinearLayoutManager(context)
             adapter = this@HomeScreen.adapter
             addItemDecoration(FeedItemDecoration(48f))
+        }
+        with(binding.story) {
+            adapter = storyAdapter
+        }
+        with(binding.banner) {
+            adapter = bannerAdapter
         }
         viewModel.loadHome()
     }
@@ -90,8 +98,10 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
                     buyCallback = {
                         PriceDialog().apply {
                             setOnPricesSelectedListener {
-                                this@HomeScreen.controller.navigate(RoviNavigationDirections.paymentSystems(
-                                    it.toPricesString())
+                                this@HomeScreen.controller.navigate(
+                                    RoviNavigationDirections.paymentSystems(
+                                        it.toPricesString()
+                                    )
                                 )
                             }
                         }.show(parentFragmentManager, null)
@@ -127,8 +137,10 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
                                 }
                             } else PriceDialog().apply {
                                 setOnPricesSelectedListener {
-                                    this@HomeScreen.controller.navigate(RoviNavigationDirections.paymentSystems(
-                                        it.toPricesString())
+                                    this@HomeScreen.controller.navigate(
+                                        RoviNavigationDirections.paymentSystems(
+                                            it.toPricesString()
+                                        )
                                     )
                                 }
                             }.show(parentFragmentManager, null)
@@ -159,8 +171,10 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
                             }
                         } else PriceDialog().apply {
                             setOnPricesSelectedListener {
-                                this@HomeScreen.controller.navigate(RoviNavigationDirections.paymentSystems(
-                                    it.toPricesString())
+                                this@HomeScreen.controller.navigate(
+                                    RoviNavigationDirections.paymentSystems(
+                                        it.toPricesString()
+                                    )
                                 )
                             }
                         }.show(parentFragmentManager, null)
@@ -185,8 +199,10 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
                             }
                         } else PriceDialog().apply {
                             setOnPricesSelectedListener {
-                                this@HomeScreen.controller.navigate(RoviNavigationDirections.paymentSystems(
-                                    it.toPricesString())
+                                this@HomeScreen.controller.navigate(
+                                    RoviNavigationDirections.paymentSystems(
+                                        it.toPricesString()
+                                    )
                                 )
                             }
                         }.show(parentFragmentManager, null)

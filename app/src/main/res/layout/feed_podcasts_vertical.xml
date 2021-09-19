@@ -24,6 +24,7 @@
         android:id="@+id/podcasts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        tools:listitem="@layout/item_feed_podcasts_vertical"
         android:layout_marginTop="@dimen/item_inner_space"
         app:layout_constraintTop_toBottomOf="@id/textPodcastsHeader" />
 </androidx.constraintlayout.widget.ConstraintLayout>

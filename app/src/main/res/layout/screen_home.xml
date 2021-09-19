@@ -13,6 +13,35 @@
         android:background="@color/none"
         app:elevation="0dp">
 
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap"
+            app:menu="@menu/news_menu"
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/Body1SemiBold"
+            app:titleTextColor="?colorPrimaryVariant" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_scrollFlags="scroll|snap"
+            tools:listitem="@layout/item_story" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/banner"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_banner" />
+
         <TextView
             android:id="@+id/assalamuAlaykum"
             style="@style/Headline3SemiBold"
@@ -24,7 +53,7 @@
             android:paddingRight="16dp"
             android:paddingBottom="16dp"
             android:text="@string/assalamu_alaykum"
-            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
             app:layout_scrollFlags="scroll|snap" />
     </com.google.android.material.appbar.AppBarLayout>
 

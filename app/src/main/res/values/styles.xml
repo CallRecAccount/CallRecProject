@@ -21,8 +21,9 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:navigationBarColor">@color/colorBackground</item>
-<!--        <item name="android:windowBackground">@color/white</item>-->
+        <!--        <item name="android:windowBackground">@color/white</item>-->
         <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
 
         <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
 
@@ -176,7 +177,7 @@
         <item name="android:layout_marginRight">8dp</item>
         <item name="android:background">@drawable/background_editable_layout_abbey</item>
         <item name="android:padding">16dp</item>
-        <item name="android:textColor">@color/ghost</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppTheme.Body1</item>
         <item name="android:textColorHint">@color/raven</item>
     </style>
 
@@ -185,8 +186,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/outline_primary_button</item>
         <item name="android:padding">16dp</item>
-<!--        <item name="android:textColor">@color/white</item>-->
-<!--        <item name="android:textColorHint">@color/white_26</item>-->
+        <!--        <item name="android:textColor">@color/white</item>-->
+        <!--        <item name="android:textColorHint">@color/white_26</item>-->
     </style>
 
     <!--Image shape-->

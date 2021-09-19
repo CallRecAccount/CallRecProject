@@ -123,9 +123,9 @@ abstract class BaseScreen<T : ViewBinding> constructor(
      * @return: Color of status bar and navigation bar
      * called first when [onViewCreated]
      * */
-    open fun statusColor(): Int = ContextCompat.getColor(requireContext(), R.color.colorPrimaryDark)
+    open fun statusColor(): Int = ContextCompat.getColor(requireContext(), R.color.colorPrimary)
     open fun navigationColor(): Int =
-        ContextCompat.getColor(requireContext(), R.color.colorPrimaryDark)
+        ContextCompat.getColor(requireContext(), R.color.black)
 
     /**
      * Updates status and navigation bar colors to same color

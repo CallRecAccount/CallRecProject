@@ -28,7 +28,6 @@
         android:focusable="false"
         android:text="@string/free"
         android:textAllCaps="true"
-        android:textColor="@color/white"
         android:visibility="gone"
         app:layout_constraintRight_toRightOf="@id/podcastImage"
         app:layout_constraintTop_toTopOf="@id/podcastImage" />

@@ -49,7 +49,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textColor="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@id/imagePodcast"
         tools:text="Aybdorlik hissi" />
 
@@ -62,7 +61,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:textAllCaps="true"
-        android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textPodcastTitle"
         tools:text="Ertakterapiya" />
@@ -73,7 +71,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textSectionName"
         tools:text="12 daqiqa" />

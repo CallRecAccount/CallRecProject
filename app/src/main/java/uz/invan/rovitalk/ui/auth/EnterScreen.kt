@@ -53,9 +53,6 @@ class EnterScreen : BaseScreen<ScreenEnterBinding>(false, null) {
         binding.version.text = getString(R.string.app_version_x, BuildConfig.VERSION_NAME)
     }
 
-    override fun statusColor() = ContextCompat.getColor(requireContext(), R.color.deluge)
-    override fun navigationColor() = ContextCompat.getColor(requireContext(), R.color.victoria)
-
     private val navigateVideoObserver: EventObserver<String> = EventObserver { video ->
         controller.navigate(RoviNavigationDirections.moveVideoScreen(video))
     }
