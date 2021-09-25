@@ -5,7 +5,6 @@
     android:id="@+id/itemSettingsLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/background_contained_bright_gray"
     android:clickable="true"
     android:focusable="true"
     android:padding="18dp">
@@ -18,7 +17,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_baseline_help_24" />
+        tools:src="@drawable/ic_baseline_help_24"
+        app:tint="?colorOnSecondary" />
 
     <TextView
         android:id="@+id/textItemSettings"
@@ -26,7 +26,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
-        android:textColor="@color/athens_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/imageItemSettings"
         app:layout_constraintTop_toTopOf="parent"

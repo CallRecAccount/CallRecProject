@@ -3,11 +3,13 @@ package uz.invan.rovitalk.ui.feed
 import uz.invan.rovitalk.data.models.feed.FeedCategory
 import uz.invan.rovitalk.data.models.feed.FeedSection
 import uz.invan.rovitalk.data.models.feed.Purchase
+import uz.invan.rovitalk.data.models.story.Story
 import uz.invan.rovitalk.util.SearchManager
 
 object FeedConstructor {
     fun buildFeedHome(builderHome: FeedHomeBuilderData): ArrayList<FeedConfig.FeedItems> {
         val configItems = arrayListOf<FeedConfig.FeedItems>()
+
         configItems.add(
             FeedConfig.FeedItems(
                 type = FeedConfig.FeedTypes.SECTIONS_GRID,
@@ -235,6 +237,7 @@ object FeedConstructor {
     }
 
     data class FeedHomeBuilderData(
+//        val stories:StoryBuilderData,
         val gridSections: FeedSectionsGridBuilderData,
         val buy: FeedBuyBuilderData,
         val video: FeedPodcastsVideoBuilderData,
@@ -242,6 +245,8 @@ object FeedConstructor {
         val bigMedia: FeedBigMediaBuilderData,
         val mostListened: FeedPodcastsIconsBuilderData,
     )
+
+    data class StoryBuilderData(val stories:List<Story>)
 
     data class FeedSectionsGridBuilderData(
         val sections: List<FeedSection>,

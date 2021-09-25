@@ -11,13 +11,14 @@
     tools:background="@drawable/bottom_dialog_background"
     tools:context=".ui.profile.language.ChangeLanguageDialog">
 
-    <Button
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/back"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:background="@drawable/contained_back_button"
+        android:background="?selectableItemBackground"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back" />
 
     <TextView
         android:id="@+id/textCancel"
@@ -45,7 +46,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/choose_language"
-        android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
         app:layout_constraintTop_toBottomOf="@id/back" />
 
@@ -56,7 +56,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/choose_language_want_to_use"
-        android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
         app:layout_constraintRight_toRightOf="@id/rightGuideline"
         app:layout_constraintTop_toBottomOf="@id/textChooseLanguage" />

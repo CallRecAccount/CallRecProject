@@ -47,9 +47,8 @@
                 android:padding="12dp"
                 android:text="@string/search"
                 android:textAllCaps="false"
-                android:textColor="@color/nobel"
-                app:drawableLeftCompat="@drawable/ic_search"
-                app:drawableStartCompat="@drawable/ic_search" />
+                app:drawableStartCompat="@drawable/ic_search"
+                app:drawableTint="@color/black" />
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 

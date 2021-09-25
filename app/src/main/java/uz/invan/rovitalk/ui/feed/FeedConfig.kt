@@ -3,15 +3,17 @@ package uz.invan.rovitalk.ui.feed
 import androidx.annotation.FloatRange
 import uz.invan.rovitalk.data.models.feed.FeedCategory
 import uz.invan.rovitalk.data.models.feed.FeedSection
+import uz.invan.rovitalk.data.models.story.Story
 import uz.invan.rovitalk.ui.feed.FeedConfig.*
 
 class FeedConfig(val items: ArrayList<FeedItems>) {
     enum class FeedTypes {
-        SECTIONS_GRID, SECTION, PODCASTS_ICONS, PODCASTS_GRID, PODCASTS_VERTICAL, BUY, MEDIA, HEADER, MY_TARIFFS, NONE
+        STORY, SECTIONS_GRID, SECTION, PODCASTS_ICONS, PODCASTS_GRID, PODCASTS_VERTICAL, BUY, MEDIA, HEADER, MY_TARIFFS, NONE
     }
 
     data class FeedItems(
         val type: FeedTypes,
+        val storyParams: StoryParams? = null,
         val feedSectionsGridParams: FeedSectionGridParams? = null,
         val feedSectionParams: FeedSectionParams? = null,
         val feedPodcastsIconsParams: FeedPodcastsIconsParams? = null,
@@ -21,6 +23,16 @@ class FeedConfig(val items: ArrayList<FeedItems>) {
         val feedHeaderParams: FeedHeaderParams? = null,
         val feedMyTariffsParams: FeedMyTariffsParams? = null,
         val feedPodcastsVerticalParams: FeedPodcastsVerticalParams? = null,
+    )
+
+    fun interface StoryClickListener {
+        fun onClick(story: Story)
+    }
+
+    data class StoryParams(
+        val stories: List<Story>,
+        val callback: StoryClickListener= StoryClickListener {  },
+
     )
 
     fun interface SectionGridClickListener {

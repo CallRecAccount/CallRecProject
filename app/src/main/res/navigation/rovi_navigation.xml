@@ -73,6 +73,11 @@
             app:exitAnim="@anim/anim_close_slide_up"
             app:popEnterAnim="@anim/anim_open_slide_down"
             app:popExitAnim="@anim/anim_close_slide_down" />
+        <action
+            android:id="@+id/to_categoriesScreen"
+            app:destination="@id/categoriesScreen"
+            app:enterAnim="@anim/anim_open_slide_left"
+            app:exitAnim="@anim/anim_close_slide_left"/>
     </fragment>
     <fragment
         android:id="@+id/section"
@@ -451,4 +456,9 @@
             android:id="@+id/to_enterScreen"
             app:destination="@id/enterScreen" />
     </fragment>
+    <fragment
+        android:id="@+id/categoriesScreen"
+        android:name="uz.invan.rovitalk.ui.category.CategoriesScreen"
+        android:label="screen_categories"
+        tools:layout="@layout/screen_categories" />
 </navigation>

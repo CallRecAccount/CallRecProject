@@ -28,6 +28,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
+        tools:visibility="visible"
+        app:backgroundTint="?android:windowBackground"
         app:itemIconTint="@drawable/tint_bottom_navigation"
         app:itemTextColor="@drawable/tint_bottom_navigation"
         app:layout_constraintBottom_toBottomOf="parent"

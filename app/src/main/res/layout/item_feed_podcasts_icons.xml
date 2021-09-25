@@ -11,7 +11,7 @@
         android:clickable="true"
         android:contentDescription="@string/feed_podcast_image"
         android:focusable="true"
-        android:foreground="@drawable/transparent_ripple_background"
+        android:background="@drawable/transparent_ripple_background"
         android:transitionName="@string/category_transition"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="2:1"

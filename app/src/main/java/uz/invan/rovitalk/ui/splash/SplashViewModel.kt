@@ -51,7 +51,7 @@ class SplashViewModel @Inject constructor(
     }
 
     private suspend fun retrieveInitialDataAndMoveHome() {
-        podcasts.retrieveSectionsAndCategories(ignoreCache = true).catch { exception ->
+        podcasts.retrieveSectionsAndCategories(ignoreCache = false).catch { exception ->
             moveToHome()
         }.collect { resource ->
             if (resource is Resource.Success)

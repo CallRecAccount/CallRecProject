@@ -15,10 +15,8 @@
         style="?textAppearanceBody2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_contained_bright_gray"
         android:gravity="center"
         android:padding="16dp"
-        android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,6 +31,7 @@
         android:contentDescription="@string/tick_image"
         android:src="@drawable/ic_baseline_check_24_accent"
         android:visibility="gone"
+        tools:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

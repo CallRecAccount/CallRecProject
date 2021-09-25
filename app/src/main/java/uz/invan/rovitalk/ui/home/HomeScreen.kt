@@ -4,6 +4,7 @@ import android.view.animation.AnimationUtils
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 import uz.invan.rovitalk.R
@@ -53,6 +54,7 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
         viewModel.timeOut.observe(viewLifecycleOwner, timeOutObserver)
         viewModel.updateSmallLoader.observe(viewLifecycleOwner, updateSmallLoaderObserver)
         viewModel.updateLoader.observe(viewLifecycleOwner, updateLoaderObserver)
+        viewModel.toCategories.observe(viewLifecycleOwner, toCategoriesObserver)
     }
 
     override fun onViewAttach() {
@@ -67,8 +69,13 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
         }
         with(binding.banner) {
             adapter = bannerAdapter
+            val snapHelper = PagerSnapHelper()
+            snapHelper.attachToRecyclerView(this)
         }
         viewModel.loadHome()
+        binding.books.setOnClickListener {
+            viewModel.toBooks()
+        }
     }
 
     private val setPosterObserver: Observer<String> = Observer { posterUrl ->
@@ -87,6 +94,7 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
 
         val builderData = FeedConstructor.buildFeedHome(
             builderHome = FeedConstructor.FeedHomeBuilderData(
+//                stories = FeedConstructor.StoryBuilderData(),
                 gridSections = FeedConstructor.FeedSectionsGridBuilderData(
                     sections = sections,
                     gridSectionCallback = { section ->
@@ -321,5 +329,8 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
     private val updateLoaderObserver: Observer<Boolean> = Observer { isLoaderVisible ->
         if (isLoaderVisible) showProgress()
         else dismissProgress()
+    }
+    private val toCategoriesObserver = EventObserver<Unit> {
+        controller.navigate(HomeScreenDirections.toCategoriesScreen())
     }
 }

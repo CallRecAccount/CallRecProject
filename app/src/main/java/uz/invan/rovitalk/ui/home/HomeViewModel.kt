@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import dagger.assisted.Assisted
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.catch
@@ -23,7 +22,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-     private val savedStateHandle: SavedStateHandle,
+    private val savedStateHandle: SavedStateHandle,
     private val podcasts: PodcastsRepository,
 ) : ViewModel() {
     private val _setPoster = MutableLiveData<String>()
@@ -54,6 +53,9 @@ class HomeViewModel @Inject constructor(
     val updateSmallLoader: LiveData<Event<Boolean>> get() = _updateSmallLoader
     private val _updateLoader = MutableLiveData<Boolean>()
     val updateLoader: LiveData<Boolean> get() = _updateLoader
+
+    private val _toCategories = MutableLiveData<Event<Unit>>()
+    val toCategories: LiveData<Event<Unit>> get() = _toCategories
 
     fun setPoster() {
         _setPoster.value = "https://telegra.ph/file/397198e4861617312c26f.png"
@@ -171,6 +173,10 @@ class HomeViewModel @Inject constructor(
                 _timeOut.postValue(Event(Unit))
             }
         }
+    }
+
+    fun toBooks() {
+        _toCategories.value = Event(Unit)
     }
 
     companion object {
