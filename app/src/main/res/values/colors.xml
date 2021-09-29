@@ -5,7 +5,7 @@
     <color name="colorAccent">@color/fern</color>
     <color name="colorBackground">@color/white</color>
 
-
+    <color name="mine_shaft">#2B2B2B</color>
     <color name="lucky_point">#252168</color>
     <color name="haiti">#0F0D39</color>
     <color name="haiti_dark">#0a0928</color>

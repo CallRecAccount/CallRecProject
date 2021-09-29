@@ -11,12 +11,12 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/image"
         android:scaleType="centerCrop"
-        android:src="@drawable/image" />
+         />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background_gradient_main_half" />
+         />
 
     <ImageButton
         android:id="@+id/close"
@@ -39,7 +39,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/restore_purchase"
-        android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/close" />
@@ -54,18 +53,20 @@
         android:layout_marginEnd="24dp"
         android:gravity="center"
         android:text="@string/restore_purchase_info"
-        android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textRestorePurchase" />
 
-    <Button
-        style="@style/PrimaryContainedButton"
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="24dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
         android:text="@string/restore_purchase"
-        app:layout_constraintTop_toBottomOf="@id/textRestorePurchaseInfo" />
+        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+        app:layout_constraintTop_toBottomOf="@id/textRestorePurchaseInfo"
+        app:shapeAppearanceOverlay="@style/RoundCorner" />
 </androidx.constraintlayout.widget.ConstraintLayout>

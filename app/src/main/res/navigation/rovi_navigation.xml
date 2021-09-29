@@ -78,6 +78,9 @@
             app:destination="@id/categoriesScreen"
             app:enterAnim="@anim/anim_open_slide_left"
             app:exitAnim="@anim/anim_close_slide_left"/>
+        <action
+            android:id="@+id/to_storyScreen"
+            app:destination="@id/storyScreen" />
     </fragment>
     <fragment
         android:id="@+id/section"
@@ -461,4 +464,22 @@
         android:name="uz.invan.rovitalk.ui.category.CategoriesScreen"
         android:label="screen_categories"
         tools:layout="@layout/screen_categories" />
+    <fragment
+        android:id="@+id/storyScreen"
+        android:name="uz.invan.rovitalk.ui.story.StoryScreen"
+        android:label="screen_story"
+        tools:layout="@layout/screen_story" />
+    <fragment
+        android:id="@+id/storyPage"
+        android:name="uz.invan.rovitalk.ui.story.StoryPage"
+        android:label="StoryPage" >
+        <argument
+            android:name="story"
+            app:argType="uz.invan.rovitalk.data.models.story.Story" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailsScreen"
+        android:name="uz.invan.rovitalk.ui.detail.BookDetailsScreen"
+        android:label="screen_book_details"
+        tools:layout="@layout/screen_book_details" />
 </navigation>

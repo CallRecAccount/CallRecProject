@@ -51,7 +51,7 @@ class PodcastsScreen : BaseScreen<ScreenPodcastsBinding>(true, direction = MainD
         with(binding.feedPodcasts) {
             layoutManager = LinearLayoutManager(context)
             adapter = this@PodcastsScreen.adapter
-            addItemDecoration(FeedItemDecoration(48f))
+            addItemDecoration(FeedItemDecoration(0f))
         }
         binding.back.setOnClickListener { viewModel.exit() }
         viewModel.retrieveCategories(podcastsArgs.categoryId)

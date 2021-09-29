@@ -12,6 +12,11 @@ import uz.invan.rovitalk.util.ktx.layoutInflater
  * Copyright (c) 2021  All rights reserved.
  **/
 class StoryAdapter : ListAdapter<String, StoryVH>(COMPARATOR) {
+    private var clickListener: StoryClickListener? = null
+
+    fun onClick(listener: StoryClickListener) {
+        clickListener = listener
+    }
 
     companion object {
         private val COMPARATOR = object : DiffUtil.ItemCallback<String>() {
@@ -28,11 +33,11 @@ class StoryAdapter : ListAdapter<String, StoryVH>(COMPARATOR) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoryVH {
         val binding = ItemStoryBinding.inflate(parent.layoutInflater, parent, false)
-        return StoryVH(binding)
+        return StoryVH(binding, clickListener)
     }
 
     override fun onBindViewHolder(holder: StoryVH, position: Int) {
-
+        holder.onBind("")
     }
 
     override fun getItemCount(): Int {
@@ -40,9 +45,21 @@ class StoryAdapter : ListAdapter<String, StoryVH>(COMPARATOR) {
     }
 }
 
-class StoryVH(private val binding: ItemStoryBinding) : BaseVH<String>(binding.root) {
+class StoryVH(
+    private val binding: ItemStoryBinding,
+    private val clickListener: StoryClickListener?
+) : BaseVH<String>(binding.root) {
+
+    override fun itemClick(item: String) {
+        binding.root.setOnClickListener {
+            clickListener?.invoke(item)
+        }
+    }
+
     override fun onBind(item: String) {
         super.onBind(item)
 
     }
 }
+
+typealias StoryClickListener = (item: String) -> Unit

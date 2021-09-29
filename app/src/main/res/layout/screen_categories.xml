@@ -9,7 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?colorOnPrimary"
+        android:background="?android:windowBackground"
         app:elevation="0dp">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -40,7 +40,7 @@
             android:drawablePadding="12dp"
             android:hint="@string/search_hint"
             android:paddingStart="24dp"
-            app:drawableTint="@color/black" />
+            />
         <!--        </com.google.android.material.textfield.TextInputLayout>-->
 
         <com.google.android.material.textview.MaterialTextView

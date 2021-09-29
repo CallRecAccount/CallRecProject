@@ -26,6 +26,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.warkiz.widget.IndicatorSeekBar
 import es.dmoral.toasty.Toasty
 import io.feeeei.circleseekbar.CircleSeekBar
+import jp.wasabeef.blurry.Blurry
 import timber.log.Timber
 import uz.invan.rovitalk.R
 import java.text.DecimalFormat
@@ -46,6 +47,10 @@ fun ConstraintLayout.setDimensionRatioTo(view: View, ratio: String) {
     set.clone(this)
     set.setDimensionRatio(view.id, ratio)
     set.applyTo(this)
+}
+
+fun Blurry.Composer.postOnto(viewGroup: ViewGroup) {
+    viewGroup.post { onto(viewGroup) }
 }
 
 // measurements-ktx

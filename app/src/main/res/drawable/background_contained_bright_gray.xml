@@ -3,7 +3,8 @@
     android:color="@color/fern_26">
     <item>
         <shape>
-            <solid android:color="@color/bright_gray" />
+            <solid android:color="?cardColor" />
+            <corners android:radius="4dp" />
         </shape>
     </item>
 </ripple>

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
     tools:context=".ui.price.PaymentSystemsScreen">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -23,12 +22,13 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_scrollFlags="scroll|snap">
 
-            <Button
+            <ImageButton
                 android:id="@+id/back"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/contained_back_button"
+                android:background="@drawable/contained_circle_primary_button"
+                android:src="@drawable/ic_arrow_back"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/payment_systems"
-                android:textColor="@color/colorPrimary" />
+                />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -112,13 +112,13 @@
                 app:layout_constraintTop_toBottomOf="@id/textAmountRub"
                 tools:text="@string/sum_x" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/support"
                 style="@style/AccentContainedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="32dp"
-                android:drawableStart="@drawable/ic_baseline_call_24"
+                app:icon="@drawable/ic_baseline_call_24"
                 android:paddingStart="48dp"
                 android:paddingEnd="48dp"
                 android:stateListAnimator="@null"

@@ -3,6 +3,7 @@
     android:color="@color/fern_26">
     <item>
         <shape>
+            <solid android:color="?colorSecondary" />
             <corners android:radius="12dp" />
         </shape>
     </item>

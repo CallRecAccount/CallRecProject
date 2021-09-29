@@ -21,32 +21,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:id="@+id/textAudioName"
         style="@style/Headline6SemiBold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
-        android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="@id/imageAudio"
         app:layout_constraintRight_toRightOf="@id/imageAudio"
-        tools:text="O'zlikni anglash"
-        app:layout_constraintTop_toBottomOf="@id/imageAudio" />
+        app:layout_constraintTop_toBottomOf="@id/imageAudio"
+        tools:text="O'zlikni anglash" />
 
     <TextView
         android:id="@+id/textAuthor"
         style="?textAppearanceBody1"
         android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
+        android:gravity="center"
         app:layout_constraintLeft_toLeftOf="@id/imageAudio"
         app:layout_constraintRight_toRightOf="@id/imageAudio"
         app:layout_constraintTop_toBottomOf="@id/textAudioName"
-        android:gravity="center"
         tools:text="Uyqudagi va tungi qo'rquvlarni davolash uchun nima qilish kerak" />
 
     <io.feeeei.circleseekbar.CircleSeekBar
@@ -85,12 +83,13 @@
         android:id="@+id/progressCircular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:indeterminateTint="@color/colorPrimary"
+        android:indeterminateTint="?colorOnSecondary"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/progressAudio"
         app:layout_constraintLeft_toLeftOf="@id/progressAudio"
         app:layout_constraintRight_toRightOf="@id/progressAudio"
-        app:layout_constraintTop_toTopOf="@id/progressAudio" />
+        app:layout_constraintTop_toTopOf="@id/progressAudio"
+        tools:visibility="visible" />
 
     <ImageButton
         android:id="@+id/controlButton"
@@ -110,12 +109,12 @@
         style="?textAppearanceCaption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="18:32"
         android:visibility="gone"
-        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="@id/progressAudio"
         app:layout_constraintLeft_toLeftOf="@id/progressAudio"
         app:layout_constraintRight_toRightOf="@id/progressAudio"
-        app:layout_constraintTop_toBottomOf="@id/controlButton" />
+        app:layout_constraintTop_toBottomOf="@id/controlButton"
+        tools:text="18:32"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

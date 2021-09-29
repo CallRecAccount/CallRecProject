@@ -1,5 +1,6 @@
 package uz.invan.rovitalk.ui.home
 
+import android.os.Environment
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -75,6 +76,9 @@ class HomeScreen : BaseScreen<ScreenHomeBinding>(true, MainDirections.HOME) {
         viewModel.loadHome()
         binding.books.setOnClickListener {
             viewModel.toBooks()
+        }
+        storyAdapter.onClick {
+            controller.navigate(HomeScreenDirections.toStoryScreen())
         }
     }
 

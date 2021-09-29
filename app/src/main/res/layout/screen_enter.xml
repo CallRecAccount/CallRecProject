@@ -70,7 +70,7 @@
             android:layout_marginTop="24dp"
             app:ccp_arrowColor="?colorPrimary"
             app:ccp_autoFormatNumber="true"
-            app:ccp_contentColor="?colorPrimary"
+            app:ccp_contentColor="?android:textColorPrimary"
             app:ccp_countryPreference="UZ"
             app:ccp_defaultLanguage="UZBEK"
             app:ccp_defaultNameCode="UZ"

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardBackgroundColor="?cardColor"
     app:cardElevation="4dp"
     app:contentPaddingBottom="8dp"
-    app:cardBackgroundColor="?cardColor"
     app:contentPaddingLeft="8dp"
     app:contentPaddingRight="8dp">
 
@@ -26,14 +26,14 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/free"
-            android:textAppearance="@style/CaptionSemiBold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingVertical="4dp"
-            android:paddingHorizontal="8dp"
             android:layout_margin="8dp"
             android:background="@drawable/background_contained_rounded_primary_16"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
             android:text="@string/free"
+            android:textAppearance="@style/CaptionSemiBold"
             android:visibility="gone"
             app:layout_constraintRight_toRightOf="@id/imagePodcast"
             app:layout_constraintTop_toTopOf="@id/imagePodcast"
@@ -50,7 +50,8 @@
             android:src="@drawable/ic_baseline_lock_24"
             android:visibility="gone"
             app:layout_constraintRight_toRightOf="@id/imagePodcast"
-            app:layout_constraintTop_toTopOf="@id/imagePodcast" />
+            app:layout_constraintTop_toTopOf="@id/imagePodcast"
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/textPodcastTitle"

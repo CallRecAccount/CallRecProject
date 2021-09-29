@@ -9,8 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:animateLayoutChanges="true"
-        android:background="@color/colorBackground">
+        android:animateLayoutChanges="true">
 
         <ImageView
             android:id="@+id/blur"
@@ -77,6 +76,7 @@
             android:padding="8dp"
             android:src="@drawable/ic_baseline_volume_up_24"
             android:visibility="invisible"
+            tools:visibility="visible"
             app:layout_constraintBottom_toTopOf="@id/voiceController"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -90,8 +90,8 @@
             android:layout_marginStart="16dp"
             android:text="@string/vocal"
             android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
             android:visibility="invisible"
+            tools:visibility="visible"
             app:layout_constraintBottom_toTopOf="@id/voiceController"
             app:layout_constraintLeft_toLeftOf="@id/voiceController" />
 
@@ -103,8 +103,8 @@
             android:layout_marginEnd="16dp"
             android:text="@string/ambient"
             android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
             android:visibility="invisible"
+            tools:visibility="visible"
             app:layout_constraintBottom_toTopOf="@id/voiceController"
             app:layout_constraintRight_toRightOf="@id/voiceController" />
 
@@ -121,7 +121,6 @@
             app:isb_progress="50"
             app:isb_seek_smoothly="true"
             app:isb_show_indicator="none"
-            app:isb_thumb_color="@color/white"
             app:isb_track_background_color="@color/dodger_blue"
             app:isb_track_progress_color="@color/dodger_blue"
             app:layout_constraintBottom_toBottomOf="parent"

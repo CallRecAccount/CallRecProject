@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:animateLayoutChanges="true"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
     tools:context=".ui.section.SearchScreen">
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -18,8 +17,6 @@
         android:imeOptions="actionSearch"
         android:inputType="textFilter"
         android:padding="16dp"
-        android:textColor="@color/ghost"
-        android:textColorHint="@color/raven"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView

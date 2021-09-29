@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
     tools:context=".ui.profile.edit.EditProfileScreen">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -68,7 +67,7 @@
                 android:background="@drawable/background_upload_photo"
                 android:gravity="center"
                 android:text="@string/upload"
-                android:textColor="?colorPrimary"
+                android:textColor="?colorOnPrimary"
                 app:layout_constraintBottom_toBottomOf="@id/imagePerson"
                 app:layout_constraintLeft_toLeftOf="@id/imagePerson"
                 app:layout_constraintRight_toRightOf="@id/imagePerson" />

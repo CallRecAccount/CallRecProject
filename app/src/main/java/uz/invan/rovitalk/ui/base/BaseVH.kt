@@ -13,8 +13,11 @@ abstract class BaseVH<T>(view: View) : RecyclerView.ViewHolder(view), LayoutCont
 
     open fun onInit(item: T) {}
 
+    open fun itemClick(item: T) {}
+
     @CallSuper
     open fun onBind(item: T) {
+        itemClick(item)
         if (isInitialized.compareAndSet(false, true)) onInit(item)
     }
 

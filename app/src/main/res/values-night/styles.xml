@@ -23,7 +23,7 @@
         <item name="windowActionBar">false</item>
         <item name="android:navigationBarColor">@color/colorBackground</item>
         <!--        <item name="android:windowBackground">@color/white</item>-->
-        <item name="android:windowBackground">@color/haiti</item>
+        <item name="android:windowBackground">@color/mine_shaft</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
 
         <item name="otpViewStyle">@style/OtpWidget.OtpView</item>

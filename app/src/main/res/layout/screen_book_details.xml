@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.BookDetailsScreen">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/none"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_arrow_back_ios" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="snap|scroll">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image"
+                android:layout_width="130dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="13:21"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/Corner8dp"
+                app:srcCompat="@drawable/image" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Елена Обухова: Невеста Смерти"
+                android:textAppearance="@style/Body1SemiBold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Елена Обухова"
+                app:layout_constraintEnd_toEndOf="@id/name"
+                app:layout_constraintStart_toStartOf="@id/name"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/rating"
+                android:textAppearance="@style/Body2SemiBold"
+                android:textColor="?android:textColorSecondary"
+                app:layout_constraintEnd_toStartOf="@+id/divider_rating"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/author" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4,5"
+                android:textAppearance="@style/Body1SemiBold"
+                android:textColor="#6C63FF"
+                app:layout_constraintEnd_toEndOf="@id/text_rating"
+                app:layout_constraintStart_toStartOf="@id/text_rating"
+                app:layout_constraintTop_toBottomOf="@id/text_rating" />
+
+            <View
+                android:id="@+id/divider_rating"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@id/rating"
+                app:layout_constraintEnd_toStartOf="@+id/text_page_count"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_rating"
+                app:layout_constraintTop_toTopOf="@id/text_rating" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_page_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_count"
+                android:textAppearance="@style/Body2SemiBold"
+                android:textColor="?android:textColorSecondary"
+
+                app:layout_constraintEnd_toStartOf="@+id/divider_page_count"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/divider_rating"
+                app:layout_constraintTop_toTopOf="@+id/text_rating" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/page_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4,5"
+                android:textAppearance="@style/Body1SemiBold"
+                android:textColor="#6C63FF"
+                app:layout_constraintEnd_toEndOf="@id/text_page_count"
+                app:layout_constraintStart_toStartOf="@id/text_page_count"
+                app:layout_constraintTop_toBottomOf="@id/text_page_count" />
+
+            <View
+                android:id="@+id/divider_page_count"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@id/page_count"
+                app:layout_constraintEnd_toStartOf="@+id/text_language"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_page_count"
+                app:layout_constraintTop_toTopOf="@id/text_page_count" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/language"
+                android:textAppearance="@style/Body2SemiBold"
+                android:textColor="?android:textColorSecondary"
+
+                app:layout_constraintEnd_toStartOf="@+id/divider_language"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/divider_page_count"
+                app:layout_constraintTop_toTopOf="@+id/text_page_count" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4,5"
+                android:textAppearance="@style/Body1SemiBold"
+                android:textColor="#6C63FF"
+                app:layout_constraintEnd_toEndOf="@id/text_language"
+                app:layout_constraintStart_toStartOf="@id/text_language"
+                app:layout_constraintTop_toBottomOf="@id/text_language" />
+
+            <View
+                android:id="@+id/divider_language"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@id/language"
+                app:layout_constraintEnd_toStartOf="@+id/text_audio"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_language"
+                app:layout_constraintTop_toTopOf="@id/text_language" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/audio"
+                android:textAppearance="@style/Body2SemiBold"
+                android:textColor="?android:textColorSecondary"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/divider_language"
+                app:layout_constraintTop_toTopOf="@+id/text_language" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4,5"
+                android:textAppearance="@style/Body1SemiBold"
+                android:textColor="#6C63FF"
+                app:layout_constraintEnd_toEndOf="@id/text_audio"
+                app:layout_constraintStart_toStartOf="@id/text_audio"
+                app:layout_constraintTop_toBottomOf="@id/text_audio" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/description"
+            android:textAppearance="@style/Body1SemiBold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:text="Чудовищная генетическая катастрофа захлестнула мир, в считаные годы погрузив цивилизацию в пучину хаоса. Земля превратилась в ядовитую бесплодную пустыню. Последние клочки почвы заняты токсичными сорняками, некогда чистый воздух наполнен ядовитую бесплодную пустыню. Читать дальше"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/text_description"
+            app:layout_constraintTop_toBottomOf="@id/text_description" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/reviews"
+            android:textAppearance="@style/Body1SemiBold"
+            app:layout_constraintStart_toStartOf="@id/description"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_book_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(4.89)"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/review"
+            app:layout_constraintEnd_toStartOf="@id/ratingBar"
+            app:layout_constraintTop_toTopOf="@id/review" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:rating="4"
+            android:stepSize="0.1"
+            app:layout_constraintBottom_toBottomOf="@id/review"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/review" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/reviews"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/review"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_review" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="24dp"
+        android:text="Купить за 59,900"
+        android:textAppearance="@style/Body2SemiBold"
+        app:cornerRadius="8dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

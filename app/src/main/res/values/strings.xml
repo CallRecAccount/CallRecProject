@@ -44,6 +44,13 @@
     <string name="books">Books</string>
     <string name="audio_books">Audiobooks</string>
     <string name="all_categories">All categories</string>
+    <string name="view_book">Kitobni ko\'rish</string>
+    <string name="rating">Reyting</string>
+    <string name="page_count">Betlar soni</string>
+    <string name="language">Til</string>
+    <string name="audio">Audio</string>
+    <string name="description">Tavsif</string>
+    <string name="reviews">Baholar</string>
     <string name="which_section_are_you_interested_in">Қайси бўлим сиз учун қизиқарли?</string>
     <string name="you_can_choose">Танлашингиз мумкин…</string>
     <string name="buy_full">Тўлиқ қисмини сотиб олиш</string>
