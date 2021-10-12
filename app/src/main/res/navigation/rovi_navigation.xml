@@ -482,4 +482,9 @@
         android:name="uz.invan.rovitalk.ui.detail.BookDetailsScreen"
         android:label="screen_book_details"
         tools:layout="@layout/screen_book_details" />
+    <fragment
+        android:id="@+id/bookViewScreen"
+        android:name="uz.invan.rovitalk.ui.BookViewScreen"
+        android:label="screen_book_view"
+        tools:layout="@layout/screen_book_view" />
 </navigation>

@@ -23,12 +23,27 @@
         android:id="@+id/player_footer"
         layout="@layout/player_footer" />
 
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:activeItem="@id/search"
+        app:backgroundColor="?android:windowBackground"
+        android:paddingHorizontal="6dp"
+        app:textSize="14sp"
+        app:iconSize="18dp"
+        app:iconTint="@color/tint_bottom_navigation"
+        app:iconTintActive="?colorOnPrimary"
+        app:indicatorColor="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom_navigation"
+        app:textColor="?colorOnPrimary" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        tools:visibility="visible"
         app:backgroundTint="?android:windowBackground"
         app:itemIconTint="@drawable/tint_bottom_navigation"
         app:itemTextColor="@drawable/tint_bottom_navigation"

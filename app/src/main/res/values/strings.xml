@@ -2,10 +2,10 @@
     <string name="app_name">Uz Book</string>
 
     <!--Bottom navigation bar menu-->
-    <string name="home">Бугун</string>
-    <string name="podcasts">Aудиолар</string>
+    <string name="home">Home</string>
+    <string name="podcasts">Aудио</string>
     <string name="profile">Профил</string>
-    <string name="my_books">My Books</string>
+    <string name="my_books">Favorites</string>
     <!--Screen labels-->
     <string name="screen_splash">Splash screen</string>
     <string name="screen_home">Home screen</string>

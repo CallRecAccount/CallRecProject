@@ -2,9 +2,9 @@
     <string name="app_name">RoviTalk</string>
 
     <!--Bottom navigation bar menu-->
-    <string name="home">Сегодня</string>
+    <string name="home">Home</string>
     <string name="podcasts">Аудио</string>
-    <string name="profile">Аудио</string>
+    <string name="profile">Profile</string>
 
     <!--Screen labels-->
     <string name="screen_splash">Splash screen</string>

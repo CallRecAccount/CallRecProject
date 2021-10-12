@@ -3,6 +3,8 @@ package uz.invan.rovitalk.ui.story
 import android.annotation.SuppressLint
 import android.view.MotionEvent
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.launch
 import pt.tornelas.segmentedprogressbar.SegmentedProgressBarListener
 import uz.invan.rovitalk.data.models.story.Story
 import uz.invan.rovitalk.databinding.ScreenStoryBinding
@@ -18,6 +20,7 @@ class StoryScreen : BaseScreen<ScreenStoryBinding>(false, null) {
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onViewAttach() {
+        viewModel.init()
         binding.viewpager.adapter = StoryAdapter(list, parentFragmentManager)
         binding.segmentedProgress.viewPager = binding.viewpager
         binding.segmentedProgress.segmentCount = list.size

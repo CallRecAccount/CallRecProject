@@ -76,18 +76,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val changeBottomBarVisibilityObserver: Observer<Boolean> = Observer { isVisible ->
-        if (!binding.bottomNavigation.isVisible) {
-            val height = binding.bottomNavigation.height
-            binding.bottomNavigation.translationY = height.toFloat()
+        if (!binding.bottomBar.isVisible) {
+            val height = binding.bottomBar.height
+            binding.bottomBar.translationY = height.toFloat()
         }
 
         val hideBottomBar = fun() {
-            binding.bottomNavigation.isGone = true
+            binding.bottomBar.isGone = true
         }
 
         val showBottomBar = fun() {
-            binding.bottomNavigation.isVisible = true
-            binding.bottomNavigation.animate().translationY(0f).setDuration(300).start()
+            binding.bottomBar.isVisible = true
+            binding.bottomBar.animate().translationY(0f).setDuration(300).start()
         }
 
         if (isVisible) showBottomBar() else hideBottomBar()
