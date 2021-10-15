@@ -77,7 +77,7 @@
             android:id="@+id/to_categoriesScreen"
             app:destination="@id/categoriesScreen"
             app:enterAnim="@anim/anim_open_slide_left"
-            app:exitAnim="@anim/anim_close_slide_left"/>
+            app:exitAnim="@anim/anim_close_slide_left" />
         <action
             android:id="@+id/to_storyScreen"
             app:destination="@id/storyScreen" />
@@ -163,19 +163,17 @@
     <action
         android:id="@+id/moveHomeMenu"
         app:destination="@id/home"
-        app:enterAnim="@anim/anim_open_move_right"
-        app:exitAnim="@anim/anim_close_move_right"
-        app:popEnterAnim="@anim/anim_open_move_left"
-        app:popExitAnim="@anim/anim_close_move_left"
-        app:popUpTo="@id/rovi_navigation"
-        app:popUpToInclusive="true" />
+        app:launchSingleTop="true"
+        app:popUpTo="@id/home"
+        app:popUpToSaveState="true"
+        app:restoreState="true" />
     <action
         android:id="@+id/moveSectionMenuFromHome"
         app:destination="@id/section"
-        app:enterAnim="@anim/anim_open_move_left"
-        app:exitAnim="@anim/anim_close_move_left"
-        app:popEnterAnim="@anim/anim_open_move_right"
-        app:popExitAnim="@anim/anim_close_move_right" />
+        app:launchSingleTop="true"
+        app:popUpTo="@id/home"
+        app:popUpToSaveState="true"
+        app:restoreState="true" />
     <action
         android:id="@+id/moveSectionMenuFromProfile"
         app:destination="@id/section"
@@ -188,12 +186,10 @@
     <action
         android:id="@+id/moveProfileMenu"
         app:destination="@id/profile"
-        app:enterAnim="@anim/anim_open_move_left"
-        app:exitAnim="@anim/anim_close_move_left"
-        app:popEnterAnim="@anim/anim_open_move_right"
-        app:popExitAnim="@anim/anim_close_move_right"
+        app:launchSingleTop="true"
         app:popUpTo="@id/home"
-        app:popUpToInclusive="true" />
+        app:popUpToSaveState="true"
+        app:restoreState="true" />
     <fragment
         android:id="@+id/enterScreen"
         android:name="uz.invan.rovitalk.ui.auth.EnterScreen"
@@ -382,9 +378,9 @@
             app:argType="uz.invan.rovitalk.data.models.feed.FeedCategory" />
         <argument
             android:name="subCategory"
+            android:defaultValue="@null"
             app:argType="uz.invan.rovitalk.data.models.feed.FeedSubCategory"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/audiosScreen"
@@ -454,7 +450,7 @@
         android:id="@+id/authScreen"
         android:name="uz.invan.rovitalk.ui.auth.AuthScreen"
         android:label="screen_auth"
-        tools:layout="@layout/screen_auth" >
+        tools:layout="@layout/screen_auth">
         <action
             android:id="@+id/to_enterScreen"
             app:destination="@id/enterScreen" />
@@ -472,7 +468,7 @@
     <fragment
         android:id="@+id/storyPage"
         android:name="uz.invan.rovitalk.ui.story.StoryPage"
-        android:label="StoryPage" >
+        android:label="StoryPage">
         <argument
             android:name="story"
             app:argType="uz.invan.rovitalk.data.models.story.Story" />
@@ -487,4 +483,25 @@
         android:name="uz.invan.rovitalk.ui.BookViewScreen"
         android:label="screen_book_view"
         tools:layout="@layout/screen_book_view" />
+    <fragment
+        android:id="@+id/favoritesPage"
+        android:name="uz.invan.rovitalk.ui.favorites.FavoritesPage"
+        android:label="page_favorites"
+        tools:layout="@layout/page_favorites">
+        <argument
+            android:name="type"
+            app:argType="uz.invan.rovitalk.data.models.favorites.Favorites" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesScreen"
+        android:name="uz.invan.rovitalk.ui.favorites.FavoritesScreen"
+        android:label="screen_favorites"
+        tools:layout="@layout/screen_favorites" />
+    <action
+        android:id="@+id/global_favoritesScreen"
+        app:destination="@id/favoritesScreen"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/home"
+        app:popUpToSaveState="true"
+        app:restoreState="true" />
 </navigation>

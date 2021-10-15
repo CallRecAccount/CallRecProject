@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="?cardColor"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <uz.invan.rovitalk.ui.feed.section.SquareImageView
+            android:id="@+id/imagePodcast"
+            android:layout_width="96dp"
+            android:layout_height="0dp"
+            android:background="@drawable/transparent_ripple_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="2:3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/image" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/background_contained_rounded_primary_16"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="@string/free"
+            android:textAppearance="@style/CaptionSemiBold"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imagePodcast" />
+
+        <ImageView
+            android:id="@+id/lock"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_background_primary"
+            android:contentDescription="@string/audio_image"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_lock_24"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textPodcastTitle"
+            style="@style/Body2SemiBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintStart_toStartOf="@+id/textSectionName"
+            app:layout_constraintTop_toBottomOf="@+id/textSectionName"
+            android:text="Aybdorlik hissi" />
+
+        <TextView
+            android:id="@+id/textSectionName"
+            style="?textAppearanceCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="?colorPrimary"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imagePodcast"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Ertakterapiya" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/book_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="Epub"
+            android:textAppearance="@style/TextAppearance.AppTheme.Caption"
+            android:textColor="?colorError"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textSectionName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textSectionName" />
+
+        <TextView
+            android:id="@+id/textPodcastLength"
+            style="?textAppearanceCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Брайан Трейси"
+            android:textColor="?colorPrimary"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textPodcastTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textPodcastTitle"
+            app:layout_constraintVertical_bias="1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(4.89)"
+            android:textAppearance="@style/TextAppearance.AppTheme.Caption"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@id/textPodcastLength"
+            app:layout_constraintEnd_toStartOf="@id/rating"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/textPodcastLength"
+            app:layout_constraintTop_toTopOf="@id/textPodcastLength" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating"
+            style="@style/RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="0.1"
+            android:transformPivotX="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/textPodcastLength"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textPodcastLength" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

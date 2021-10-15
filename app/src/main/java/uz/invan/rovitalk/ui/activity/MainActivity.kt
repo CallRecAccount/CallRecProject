@@ -121,7 +121,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val initBottomBarObserver: Observer<Unit> = Observer {
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+        /*binding.bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> controller.navigate(RoviNavigationDirections.moveHomeMenu())
                 R.id.section -> if (controller.currentDestination?.id == R.id.home)
@@ -130,6 +130,19 @@ class MainActivity : AppCompatActivity() {
                 R.id.profile -> controller.navigate(RoviNavigationDirections.moveProfileMenu())
             }
             return@setOnNavigationItemSelectedListener true
+        }*/
+        binding.bottomBar.setOnItemSelectedListener {
+            when (it) {
+                R.id.home -> controller.navigate(RoviNavigationDirections.moveHomeMenu())
+                R.id.search -> {
+//                    controller.navigate(RoviNavigationDirections.moveHomeMenu())
+                }
+                R.id.section -> {
+                    controller.navigate(RoviNavigationDirections.moveSectionMenuFromHome())
+                }
+                R.id.books -> controller.navigate(RoviNavigationDirections.globalFavoritesScreen())
+                R.id.profile -> controller.navigate(RoviNavigationDirections.moveProfileMenu())
+            }
         }
         binding.bottomNavigation.setOnNavigationItemReselectedListener { }
     }

@@ -96,6 +96,14 @@
         <item>Декабр</item>
     </string-array>
     <string name="months_x_x">%s %d, %d</string>
+
+    <!--Favorites-->
+    <string name="favorites">Favorites</string>
+    <string-array name="favorite_types">
+        <item>Mening kitoblarim</item>
+        <item>Audiokitoblar</item>
+    </string-array>
+
     <!--Audio Screen-->
     <string name="x_order">%d. </string>
     <string name="x_minute_seconds">%02d:%02d</string>
@@ -288,4 +296,6 @@
     <!--Transition names-->
     <string name="rovi_animation" translatable="false">Rovi animation</string>
     <string name="category_transition" translatable="false">Category transition</string>
+
+
 </resources>

@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId "uz.invan.rovitalk"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 15
         versionName "0.1.5"
@@ -191,10 +191,9 @@ dependencies {
 //    implementation 'com.github.afreakyelf:Pdf-Viewer:1.0.7'
 //    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
     implementation "com.folioreader:folioreader:0.5.4"
-    implementation "androidx.tonyodev.fetch2:xfetch2:3.1.6"
     implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.8'
-
-
+    //chip navigation bar
+    implementation 'com.github.ismaeldivita:chip-navigation-bar:1.3.4'
 
 
     // leak-canary
